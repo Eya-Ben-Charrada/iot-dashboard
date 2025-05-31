@@ -83,3 +83,17 @@ From here you can:
 
 
 
+
+⚠️ **Important Notes**
+
+- Make sure your Arduino is connected and sending serial data like:  
+  `TEMP:25.42;LIGHT:73`
+
+- Update the **COM port** in `serial_to_mqtt.py` to match your system (e.g., `'COM3'`, `'COM4'`, etc.)
+
+- Adjust the **SQLite database path** in both `serial_to_mqtt.py` and `streamlit_app.py` to match your local environment.  
+  Example path:  
+  `C:/Users/YourUsername/Documents/serial_mqtt/sensor_data.db`
+
+- The MQTT broker used (`test.mosquitto.org`) is public. For production, consider using a private or secure broker like HiveMQ or Mosquitto with TLS.
+
