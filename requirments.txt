@@ -1,2 +1,4 @@
-pyserial
+streamlit
 paho-mqtt
+pyserial
+pandas
