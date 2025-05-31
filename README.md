@@ -47,8 +47,39 @@ Install required packages:
 
 ```bash
 pip install -r requirements.txt
-
+```
 ---
 ### 3. Start Serial to MQTT + Database Logger
+Run the following command in your terminal:
+
+```bash
+python serial_to_mqtt.py
+```
+This script will:
+
+- 📥 Read serial data from the Arduino  
+- 📡 Publish the data to the MQTT broker (`test.mosquitto.org`)  
+- 💾 Store readings in a local SQLite database (`sensor_data.db`)  
+
+Make sure:
+
+- ✅ Your Arduino is connected and sending serial data like `TEMP:25.42;LIGHT:73`  
+- 🔧 You set the correct COM port in `serial_to_mqtt.py` (e.g., `'COM3'`, `'COM4'`, etc., depending on your system)
+
+---
+### 🌐 4. Launch the Streamlit Dashboard
+Start the dashboard with:
+```bash
+streamlit run streamlit_app.py
+```
+
+From here you can:
+
+- 📊 View real-time temperature and light charts  
+- 📅 Filter by date range  
+- ⚠️ Set custom threshold alerts  
+- 📥 Download data as CSV  
+- 🔄 See auto-refreshing data every X seconds
+
 
 
