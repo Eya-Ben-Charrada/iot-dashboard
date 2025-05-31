@@ -48,7 +48,7 @@ Install required packages:
 ```bash
 pip install -r requirements.txt
 
-
-
+---
+### 3. Start Serial to MQTT + Database Logger
 
 
